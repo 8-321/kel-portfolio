@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="night">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>柯孟含 KEL — AI 全栈产品人 / 作品集</title>
+<meta name="description" content="柯孟含（KEL）· AI 全栈产品人，FDE 方向。长沙理工大学大三，非科班。三个从零做起来的产品：第二文化测评（已公开上线）、共享 3D 打印小程序（原型）、AnPPT（内测）。">
+<meta name="theme-color" content="#0B0B0C">
+<meta property="og:title" content="柯孟含 KEL — AI 全栈产品人">
+<meta property="og:description" content="不是会了才开始，是开始了才会。1 个已上线，2 个还在路上。">
+<meta property="og:image" content="assets/img/freebie-cover.jpg">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%230B0B0C'/><text x='32' y='44' font-size='34' font-family='serif' fill='%23FF5A43' text-anchor='middle'>柯</text></svg>">
+</head>
+<body>
+
+<canvas id="stars" aria-hidden="true"></canvas>
+<div class="progress" id="progress"></div>
+<div class="cursor" id="cursor"></div>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">柯孟含 <small>KEL — PORTFOLIO 2026</small></a>
+    <nav class="navlinks">
+      <a href="#work">作品</a>
+      <a href="#live">在跑的产品</a>
+      <a href="#method">方法</a>
+      <a href="#about">关于</a>
+      <a href="#contact">联系</a>
+    </nav>
+    <div class="nav-right">
+      <button class="iconbtn" id="chaosBtn" aria-label="排版疏密" title="排版：随性 / 端正">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 5h7M13 5h7M4 12h4M10 12h10M4 19h12M18 19h2"/></svg>
+      </button>
+      <button class="iconbtn soundbtn" id="soundBtn" aria-label="开关音效" aria-pressed="false" title="声音：关">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h3l5 4V5L7 9H4z"/><path class="wave" d="M16.5 8.5a5 5 0 0 1 0 7"/><path class="mute" d="M16 9l5 6M21 9l-5 6"/></svg>
+      </button>
+      <button class="iconbtn" id="themeBtn" aria-label="切换昼夜" title="昼夜切换">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <a class="ghost-pill" href="https://github.com/8-321" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="wrap">
+      <span class="pill-label"><i></i>AI 全栈产品人 · FDE 方向 · 长沙</span>
+      <h1>
+        <span class="l"><span>敢接<span class="sp"></span>敢做</span></span>
+        <span class="l"><span><em class="grad">敢上线</em></span></span>
+      </h1>
+      <p class="lead">非科班出身，轻化工程大三。<br class="br-desk">三个产品都从真实需求长出来：<span class="nw">接得住，</span><span class="nw">做得完，</span><span class="nw">上得了线。</span></p>
+      <div class="hero-cta">
+        <a class="btn" href="#work">看三个作品 <span class="ar">↘</span></a>
+        <a class="btn ghost" href="#method">一个 AI 产品怎样工作</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b data-count="3">0</b><span>个产品</span></div>
+        <div class="stat"><b data-count="1">0</b><span>个公开上线</span></div>
+        <div class="stat"><b data-count="2">0</b><span>个还在路上</span></div>
+      </div>
+    </div>
+    <span class="scribble hero-note">别只看封面，下面才是正片 <b>↘</b></span>
+    <div class="scrollcue"><span>SCROLL</span><i></i></div>
+  </section>
+
+  <!-- 跑马灯 -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track" id="mq">
+      <span>敢接 <i>·</i> 敢做 <i>·</i> 敢上线 <i>·</i> 需求承接 <i>·</i> 架构设计 <i>·</i> 真实交付 <i>·</i> </span>
+      <span>敢接 <i>·</i> 敢做 <i>·</i> 敢上线 <i>·</i> 需求承接 <i>·</i> 架构设计 <i>·</i> 真实交付 <i>·</i> </span>
+    </div>
+  </div>
+
+  <!-- ===== 作品 ===== -->
+  <section class="sec" id="work">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <div>
+          <div class="idx">01 — Selected Work</div>
+          <div class="ttl">三个案例，三种能力</div>
+        </div>
+        <div class="note">真实需求 · 真实交付 · 真实踩坑</div>
+      </div>
+
+      <!-- CASE 01 第二文化 -->
+      <article class="case2 rv" id="case-culture">
+        <div class="case2-txt">
+          <span class="bignum">01</span>
+          <div class="cnum">01</div>
+          <h3 class="cttl">第二文化</h3>
+          <div class="cmeta">行为测评 · 亚文化切入 · 已公开上线</div>
+          <p class="quote">有创意 ≠ 有商业模式，<br><em>有流量 ≠ 有增长</em>。</p>
+          <p class="lead">从 MBTI 亚文化切入，把「测一下」做成一个真的愿意被玩完的产品：14 题情境选择，每题都是一个真实社交场景，最后给出人格画像。题目、结果页、分享图推倒重来好几轮——改到不用解释也能看懂，才算过关。</p>
+          <div class="crow"><span>角色</span><b>需求判断 · 增长 · 内容设计</b></div>
+          <div class="crow"><span>技术</span><b>微信小程序 · 云开发 · 支付核验</b></div>
+          <div class="crow"><span>现状</span><b>线上可访问 <a href="https://personaboxlab.com" target="_blank" rel="noopener">personaboxlab.com ↗</a></b></div>
+          <p class="scribble">结果页比题目难做 —— 题目骗得过人，结果骗不过。</p>
+        </div>
+        <a class="shot shot-tall chrome" data-url="personaboxlab.com" href="https://personaboxlab.com" target="_blank" rel="noopener">
+          <img src="assets/img/persona-crop.jpg" alt="第二文化测评页面实拍" loading="lazy">
+        </a>
+      </article>
+
+      <!-- CASE 02 3D 打印 -->
+      <article class="case2 flip rv" id="case-3d">
+        <div class="case2-txt">
+          <span class="bignum">02</span>
+          <div class="cnum">02</div>
+          <h3 class="cttl">共享 3D 打印机</h3>
+          <div class="cmeta">小程序 · 设备控制 · 原型阶段</div>
+          <p class="quote">需求不是我想出来的，是<em>企业直接给的</em>。</p>
+          <p class="lead">小程序做共享打印机租赁：设备控制、三层权限、计费与运维。从接口对接到硬件调试、单片机配置，整条交付链我都跟着走完——包括把团队分工和技术兜底安排清楚，因为这部分 AI 替不了。</p>
+          <div class="crow"><span>角色</span><b>需求承接 · 产品设计 · 交付</b></div>
+          <div class="crow"><span>核心</span><b>设备控制 / 三层权限 / 计费</b></div>
+          <div class="crow"><span>判断</span><b>AI 降低门槛，不降低责任</b></div>
+          <div class="crow"><span>现状</span><b>原型可跑 · 未正式上线</b></div>
+          <p class="scribble">打印机不会因为你会用 AI 就自己装好驱动。</p>
+        </div>
+        <div class="diagram">
+          <div class="drow"><span class="dk">企业</span><div class="dnodes"><i>设备台账</i><i>计费策略</i><i>运维告警</i></div></div>
+          <div class="dline"></div>
+          <div class="drow"><span class="dk">管理员</span><div class="dnodes"><i>设备开关</i><i>订单核销</i><i>权限下发</i></div></div>
+          <div class="dline"></div>
+          <div class="drow"><span class="dk">用户</span><div class="dnodes"><i>扫码预约</i><i>上传模型</i><i>取件</i></div></div>
+          <div class="dfoot">小程序端 · 云函数 · 设备 MQTT 指令</div>
+        </div>
+      </article>
+
+      <!-- CASE 03 AnPPT -->
+      <article class="case2 rv" id="case-ppt">
+        <div class="case2-txt">
+          <span class="bignum">03</span>
+          <div class="cnum">03</div>
+          <h3 class="cttl">AnPPT</h3>
+          <div class="cmeta">AI 生成 · 可编辑 PPT · 内测中</div>
+          <p class="quote">甲方、运营、技术、<em>我</em>，四个人四种语言。</p>
+          <p class="lead">先理清 PPT 的底层逻辑：版式是数据结构，不是画布。再把它拆成可生成、可编辑的中间层。架构说不清楚时最贵的不是写代码，是反复返工——所以我先画图、再做。</p>
+          <div class="crow"><span>角色</span><b>产品研发 · 体验判断 · 持续迭代</b></div>
+          <div class="crow"><span>核心</span><b>生成 → 可编辑的格式转换</b></div>
+          <div class="crow"><span>判断</span><b>不做一次性交付，长期入局</b></div>
+          <div class="crow"><span>现状</span><b>内部在用 · 未公开</b></div>
+          <p class="scribble">先画图，再写码。顺序反了，就是在给返工付定金。</p>
+        </div>
+        <div class="diagram flow">
+          <div class="fstep"><span>01</span><b>一句话 / 一份文档</b><i>输入</i></div>
+          <div class="farrow"></div>
+          <div class="fstep"><span>02</span><b>结构：章节 → 页面</b><i>大纲</i></div>
+          <div class="farrow"></div>
+          <div class="fstep"><span>03</span><b>版式：母版 + 占位</b><i>设计</i></div>
+          <div class="farrow"></div>
+          <div class="fstep hi"><span>04</span><b>可编辑 PPTX</b><i>交付</i></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== 在跑的产品 ===== -->
+  <section class="sec" id="live">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <div>
+          <div class="idx">02 — Prototypes</div>
+          <div class="ttl">能点开的原型</div>
+        </div>
+        <div class="note">演示版 · 未正式上线 · 可点开</div>
+      </div>
+
+      <div class="live-grid">
+        <!-- 白捡 -->
+        <div class="live-card rv">
+          <div class="shot portrait tape">
+            <video src="assets/img/demo-baijian.mp4" poster="assets/img/freebie-cover.jpg" autoplay muted loop playsinline preload="metadata"></video>
+            <span class="shot-tag tag-br">REC · 真实滚动录屏</span>
+          </div>
+          <div class="live-body">
+            <div class="live-top"><h3>白捡 · Freebie Campus</h3><a class="go" href="https://8-321.github.io/freebie-campus/" target="_blank" rel="noopener" aria-label="打开白捡">↗</a></div>
+            <p>校园里免费的东西，不该被扔掉。3 公里内、带倒计时、库存是真的——把散落在群聊与楼道口的「正在被免费送掉的东西」收进一个地方。</p>
+            <div class="livenums">
+              <div><b>260</b><span>今日可捡</span></div>
+              <div><b>12min</b><span>平均被领完</span></div>
+              <div><b>3km</b><span>覆盖半径</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 校园π -->
+        <div class="live-card rv" data-d="1">
+          <div class="shot wide chrome" data-url="8-321.github.io/campus-pi">
+            <img src="assets/img/campus-crop.jpg" alt="校园π 页面实拍" loading="lazy">
+          </div>
+          <div class="live-body">
+            <div class="live-top"><h3>校园 π · Campus</h3><a class="go" href="https://8-321.github.io/campus-pi/" target="_blank" rel="noopener" aria-label="打开校园π">↗</a></div>
+            <p>校园信息聚合：二手、拼单、求助、搭子，先认证在校生再交易——把「敢把东西交给对方」做成机制，而不是靠运气。</p>
+            <div class="livenums">
+              <div><b>2</b><span>步完成认证</span></div>
+              <div><b>24h</b><span>接单响应</span></div>
+              <div><b>6</b><span>个信息类目</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 方法 ===== -->
+  <section class="sec" id="method">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <div>
+          <div class="idx">03 — Method</div>
+          <div class="ttl">一个 AI 产品是怎样工作的</div>
+        </div>
+        <div class="note">从一句话，到能点开的一个页面</div>
+      </div>
+
+      <div class="pipe rv" id="pipe">
+        <div class="step"><div class="dot"></div><h4>输入理解</h4><p>用户到底说了什么，不是他字面说了什么。</p></div>
+        <div class="step" style="--d:.1s"><div class="dot"></div><h4>上下文组装</h4><p>把权限、知识、历史拼成模型能用的那一块。</p></div>
+        <div class="step" style="--d:.2s"><div class="dot"></div><h4>模型推理</h4><p>选模型、控成本、定边界——能算清账。</p></div>
+        <div class="step" style="--d:.3s"><div class="dot"></div><h4>结果处理</h4><p>校验、兜底、日志与评估，出错要能查到。</p></div>
+        <div class="step" style="--d:.4s"><div class="dot"></div><h4>输出呈现</h4><p>PRD → UI → 动效 → 代码 → 部署，一条线。</p></div>
+      </div>
+
+      <div class="rv" style="margin-top:28px">
+        <div class="layer-row"><span class="lb">企业侧</span><div class="tags"><span class="tag">权限校验</span><span class="tag">知识检索</span><span class="tag">日志评估</span><span class="tag">持续优化</span></div></div>
+        <div class="layer-row"><span class="lb">整体交付</span><div class="tags"><span class="tag">PRD</span><span class="tag">UI</span><span class="tag">动效</span><span class="tag">代码</span><span class="tag">部署</span></div></div>
+        <div class="layer-row"><span class="lb">技术栈</span><div class="tags"><span class="tag">智能体编程</span><span class="tag">上下文工程</span><span class="tag">Skill</span><span class="tag">工作流</span><span class="tag">插件</span><span class="tag">MCP</span><span class="tag">Docker</span><span class="tag">前后端</span></div></div>
+      </div>
+
+      <div class="principle rv">
+        <div class="p">
+          <div class="n">01</div>
+          <h4>敢接</h4>
+          <p>不是会了才开始，是开始了才会。大学的试错成本，是唯一付得起的成本。</p>
+        </div>
+        <div class="p">
+          <div class="n">02</div>
+          <h4>算清账</h4>
+          <p>时间成本才是最贵的。工具上省钱、返工上花钱，是新手最常算错的一笔账。</p>
+        </div>
+        <div class="p">
+          <div class="n">03</div>
+          <h4>长期入局</h4>
+          <p>做出来只是开始，用起来才算数。上线不是终点，是第一次拿到真实反馈。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 关于 ===== -->
+  <section class="sec" id="about">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <div>
+          <div class="idx">04 — About</div>
+          <div class="ttl">我是谁</div>
+        </div>
+        <div class="note">五重身份，一套方法</div>
+      </div>
+
+      <div class="about rv">
+        <div>
+          <p class="quote">我不是科班出身，<br>我是<em>从接需求开始</em>学的产品。</p>
+          <p class="lead">
+            长沙理工大学大三，轻化工程专业。第一行代码是拿 AI 写的，第一个项目是企业给的。
+            学业、竞赛、任职、创业、娱乐——五种身份最后都变成了做产品的方法：
+            竞赛教会我卡时间，任职教会我协调人，创业教会我算账，娱乐教会我知道年轻人愿意为什么停下来。
+          </p>
+          <div class="chips">
+            <span class="chip">学业 · 轻化工程</span>
+            <span class="chip">竞赛 · 时间与交付</span>
+            <span class="chip">任职 · 协调人与资源</span>
+            <span class="chip">创业 · 商业闭环</span>
+            <span class="chip">娱乐 · 亚文化体感</span>
+          </div>
+          <div class="signature">柯孟含　KEL</div>
+        </div>
+        <div class="idcard">
+          <div class="row"><span class="k">Base</span><span class="v">长沙 · 湖南</span></div>
+          <div class="row"><span class="k">School</span><span class="v">长沙理工大学 · 大三</span></div>
+          <div class="row"><span class="k">Focus</span><span class="v">AI 产品 / FDE 交付</span></div>
+          <div class="row"><span class="k">Ship</span><span class="v">1 个上线 · 2 个在路上</span></div>
+          <div class="row"><span class="k">Tooling</span><span class="v">Codex · Claude Code · Hermes</span></div>
+          <div class="row"><span class="k">Belief</span><span class="v">AI 说完成 ≠ 真的完成</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 联系 ===== -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="seal">柯</div>
+      <span class="pill-label"><i></i>Open for 2026 · 实习 / 项目合作</span>
+      <h2>一起做一个<br><span class="grad">能用的</span>产品</h2>
+      <p class="lead">敢接、敢做、敢上线。把你的需求丢过来，我们先看它能不能真的被用起来。</p>
+      <div class="links">
+        <a class="btn" href="https://github.com/8-321" target="_blank" rel="noopener">GitHub <span class="ar">↗</span></a>
+        <a class="btn ghost" href="https://personaboxlab.com" target="_blank" rel="noopener">唯一上线的那个 ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="footer">
+      <span>© 2026 柯孟含 KEL</span>
+      <span>宋体 + 手写 + 一点点焦虑</span>
+      <span>长沙 · CST</span>
+    </div>
+  </div>
+
+</main>
+
+<script src="assets/site.js"></script>
+</body>
+</html>
